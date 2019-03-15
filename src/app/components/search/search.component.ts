@@ -4,8 +4,7 @@ import { SearchResult } from '../../models/search-result.model';
 
 @Component({
   selector: 'app-search',
-  templateUrl: './search.component.html',
-  styleUrls: ['./search.component.scss']
+  templateUrl: './search.component.html'
 })
 export class SearchComponent implements OnInit {
 
