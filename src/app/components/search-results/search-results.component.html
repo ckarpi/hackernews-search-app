@@ -1,0 +1,33 @@
+<span class="row mb-4 display-4">Search Results</span>
+<ngb-pagination
+  class="d-flex justify-content-end"
+    [(page)]="page"
+    [pageSize]="results.hitsPerPage"
+    [collectionSize]="1000"
+    [boundaryLinks]="true"
+    [maxSize]="5"
+    size="md"
+    (pageChange)="pageChangeEvent($event)"></ngb-pagination>
+<div class="row">
+<div class="col">
+  <div class="row border-bottom" *ngFor="let item of hits">
+    <div class="mb-2 mt-2 bb-1">
+        <h5><a target="_blank" href="{{item.url}}">{{item.title}}</a></h5>
+        <span class="font-weight-bold">author: </span><span>{{item.author}} | </span>
+        <span *ngIf="item.url"><span class="font-weight-bold">url: </span>{{item.url}} |</span>
+    </div>
+  </div>
+</div>
+</div>
+<br>
+<br>
+
+  <ngb-pagination
+  class="d-flex justify-content-end"
+    [(page)]="page"
+    [pageSize]="results.hitsPerPage"
+    [collectionSize]="1000"
+    [boundaryLinks]="true"
+    [maxSize]="5"
+    size="md"
+    (pageChange)="pageChangeEvent($event)"></ngb-pagination>

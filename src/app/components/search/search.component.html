@@ -1,0 +1,23 @@
+<div class="jumbotron">
+  <div class="container text-center">
+    <p class="text-dark display-4">Search for any article</p>
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-10 col-lg-8">
+        <form>
+          <div class="card-body row no-gutters align-items-center">
+            <div class="input-group">
+              <div class="col">
+                <input class="form-control form-control-lg form-control-borderless" type="search"
+                  placeholder="Type your query here" autocomplete="off" name="searchBar" [(ngModel)]="searchQuery"
+                  (keyup)="searchByQuery()">
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container" *ngIf="searchResults && searchResults.hits.length > 0">
+  <app-search-results (pageChanged)="searchByPage($event)" [results]="searchResults"></app-search-results>
+</div>
