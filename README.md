@@ -1,5 +1,7 @@
 # HackernewsSearchApp
 
+[![Build Status](https://travis-ci.com/ckarpi/hackernews-search-app.svg?branch=master)](https://travis-ci.com/ckarpi/hackernews-search-app)
+
 This is a search app based on Hacker News Search API. The user could search for articles in it.
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.3.
 
